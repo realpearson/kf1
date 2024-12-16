@@ -97,8 +97,10 @@ togglePlayButton = {
     on = !on;
     if (on) {
       start()
+      fullscreen(true);
     } else {
       stop();
+      fullscreen(false);
     }
   }
 }
