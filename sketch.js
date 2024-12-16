@@ -55,6 +55,7 @@ let togglePlayButton;
 function setup() {
   cnv = createCanvas(displayWidth * (1 / displayDensity()), displayHeight * (1 / displayDensity()));
   background(20);
+  fullscreen(true);
 
   seg = new container(10000, true);
   makeDynamicSeq2(seq);
@@ -97,10 +98,8 @@ togglePlayButton = {
     on = !on;
     if (on) {
       start()
-      fullscreen(true);
     } else {
       stop();
-      fullscreen(false);
     }
   }
 }
