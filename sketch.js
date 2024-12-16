@@ -55,7 +55,6 @@ let togglePlayButton;
 function setup() {
   cnv = createCanvas(displayWidth * (1 / displayDensity()), displayHeight * (1 / displayDensity()));
   background(20);
-  fullscreen(true);
 
   seg = new container(10000, true);
   makeDynamicSeq2(seq);
@@ -107,6 +106,7 @@ togglePlayButton = {
 }
 
 function mousePressed(){
+  if(!fullscreen()) fullscreen(true);
   if(mouseX > conditionAButton.pos.x && mouseX < conditionAButton.pos.x + conditionAButton.size.x
     && mouseY > conditionAButton.pos.y && mouseY < conditionAButton.pos.y + conditionAButton.size.y)
   {
